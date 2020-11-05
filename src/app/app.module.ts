@@ -11,6 +11,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { MapComponent } from './map/map.component';
 import { ChartsComponent } from './charts/charts.component';
 import { AboutComponent } from './about/about.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AboutComponent } from './about/about.component';
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    LeafletModule
   ],
   providers: [],
   bootstrap: [AppComponent]
