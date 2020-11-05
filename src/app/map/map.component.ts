@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { latLng, tileLayer } from 'leaflet';
 
 @Component({
@@ -6,9 +6,7 @@ import { latLng, tileLayer } from 'leaflet';
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })
-export class MapComponent implements OnInit {
-
-  constructor() { }
+export class MapComponent {
   public options: any = {
     layers: [
         tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -19,7 +17,7 @@ export class MapComponent implements OnInit {
     zoom: 6,
     center: latLng(46.303558, 6.0164252)
 };
-  ngOnInit() {
-  }
+  constructor() { }
+
 
 }
