@@ -1,2 +1,25 @@
-Test
+<mat-toolbar color="primary">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item mat-menu-item routerLink="" routerLinkActive="active"> 
+        <mat-icon>home</mat-icon>
+        <span>Acceuil</span>
+      </button>
+      <button mat-menu-item mat-menu-item mat-menu-item mat-menu-item routerLink="../map" routerLinkActive="active">
+        <mat-icon>map</mat-icon>
+        <span>Carte</span>
+      </button>
+      <button mat-menu-item mat-menu-item mat-menu-item routerLink="../charts" routerLinkActive="active">
+        <mat-icon>bar_chart</mat-icon>
+        <span>Graphiques</span>
+      </button>
+      <button mat-menu-item mat-menu-item mat-menu-item routerLink="../about" routerLinkActive="active">
+        <mat-icon>info</mat-icon>
+        <span>A propos</span>
+      </button>
+    </mat-menu>
+    <span>Real Estate Visualizer</span>
+  </mat-toolbar>
 <router-outlet></router-outlet>
