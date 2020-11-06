@@ -12,6 +12,7 @@ import { MapComponent } from './map/map.component';
 import { ChartsComponent } from './charts/charts.component';
 import { AboutComponent } from './about/about.component';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
     MatToolbarModule,
     MatButtonModule,
     MatMenuModule,
-    LeafletModule
+    LeafletModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
