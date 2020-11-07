@@ -1,4 +1,29 @@
-.map {
-    height: 93%;
-  }
-  
+  .firstPlan {
+    z-index: 2;
+}
+
+.lastPlan {
+    z-index: 1;
+}
+.squareLegend {
+  width: 20px;
+  height: 20px;
+}
+
+.legend {
+    width: 175px;
+    height: 250px;
+    position: fixed;
+    bottom:60px;
+    right:40px;
+    background-color: white;
+}
+.legendTop {
+  z-index: 3;
+  width: 200px;
+  height: 175px;
+  position: fixed;
+  top: 65px;
+  right: 40px;
+  background-color: white;
+}

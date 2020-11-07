@@ -1,6 +1,42 @@
-<div class="map"
-     leaflet
-     [leafletOptions]="options"
-     [leafletLayers]="layers">
+<div class="lastPlan" style="height: 93%;" leaflet [leafletOptions]="options" [leafletLayers]="layers">
 </div>
-
+<div class="firstPlan legend">
+  <div fxLayout="column" fxLayoutGap="10px">
+    <div fxLayoutAlign="center">
+      <h3 style="margin: 0px;">
+        Prix moyen du m<SUP>2</SUP>
+      </h3>
+    </div>
+    <div fxFlex fxLayout="row"  fxLayoutAlign="space-evenly">
+      <div fxLayout="column" fxLayoutAlign="left">
+      <div style='background: #BC0000; color:#BC0000' class="squareLegend">f</div>
+      <div style='background: #FF1919; color:#FF1919' class="squareLegend">f</div>
+      <div style='background: #FF5900; color:#FF5900' class="squareLegend">f</div>
+      <div style='background: #FF5900; color:#FF5900' class="squareLegend">f</div>
+      <div style='background: #FF5900; color:#FF5900' class="squareLegend">f</div>
+      <div style='background: #FF5900; color:#FF5900' class="squareLegend">f</div>
+      <div style='background: #FF5900; color:#FF5900' class="squareLegend">f</div>
+      <div style='background: #FF9C00; color:#FF9C00' class="squareLegend">f</div>
+      <div style='background: #FFE500; color:#FFE500' class="squareLegend">f</div>
+      <div style='background: #EFF9CE; color:#EFF9CE' class="squareLegend">f</div>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="right">
+        <div *ngFor="let info of selectedLegendInfos">{{info}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="firstPlan legendTop" *ngIf="departementName">
+     <div fxFlex fxLayout="row" fxLayoutAlign="center">
+         <div fxLayout="column" fxLayoutAlign="center">
+                 <h2 fxLayoutAlign="center" style="margin: 0px;font-weight: bold;">
+                     {{departementName}}
+                 </h2>
+                 <div fxLayoutAlign="center">
+                     <h3 style="margin: 0px;">
+                         {{departementprix}} €
+                     </h3>     
+                 </div>
+         </div>
+     </div>       
+ </div>
