@@ -1,5 +1,18 @@
+<div style="padding-top: 10px;padding-left: 10px; color: white;">
+  <form style="background-color: black;" [formGroup]="departementForm" class="example-form" (ngSubmit)="loadData()">
+    <p>Veuillez entrer les deux chiffres du département que vous souhaitez observer.</p>
+  <mat-form-field class="example-full-width" >
+    <mat-label>Numéro de département</mat-label>
+    <input  matInput formControlName="departement">
+  </mat-form-field>
+  <button mat-flat-button type='submit'>Envoyer</button>
+</form>
+
+</div>
 
 
-  <div class="center"><h2>Graphiques</h2>
- 
-    </div>
+<div  fxFlex >
+  <plotly-plot fxFlex  [useResizeHandler]="true" [data]="allData"
+      [config]="config" [layout]="layout">
+  </plotly-plot>
+</div>
